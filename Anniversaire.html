@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise</title>
+    <link rel="icon" href="image.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS.css">
+</head>
+<body>
+
+    <div id="login-screen">
+        <h2>Une surprise t'attend...</h2>
+        <p>Entre le mot de passe secret :</p>
+        <input type="password" id="password-input" placeholder="Mot de passe">
+        <br>
+        <button onclick="checkPassword()">Valider</button>
+        <div id="error-msg">Mauvais mot de passe, réessaye ! ❤️</div>
+    </div>
+
+    <div id="party-screen">
+        <h1 class="big-text">Joyeux Anniversaire Lou !</h1>
+        <p class="sub-text">Je t'aime mon amour ❤️<br>Joyeuse Majorité !</p>
+        
+        <button class="bonus-button" onclick="showVideo()">🎁 Clique ici pour une dernière surprise !</button>
+    </div>
+
+    <div id="video-overlay" class="hidden" onclick="closeVideo()">
+        <div class="video-container" onclick="event.stopPropagation()">
+            <video id="meme-video" controls>
+                <source src="Rock.mp4" type="video/mp4">
+                Ton navigateur ne supporte pas la vidéo.
+            </video>
+            <p style="color: white; margin-top: 10px; font-size: 0.9rem;">(Clique à côté pour fermer)</p>
+        </div>
+    </div>
+
+    <canvas id="confetti-canvas"></canvas>
+
+    <script src="JS.js"></script>
+</body>
+</html>
